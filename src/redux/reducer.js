@@ -14,11 +14,11 @@ export const cartData = (data = [], action) => {
     switch (action.type) {
         case ADD_TO_CART:
             console.warn("ADD_TO_CART CONDITION", action)
-            return 1 + 1;
+            return [action.data, ...data];
         case REMOVE_TO_CART:
             console.warn("REMOVE_TO_CART CONDITION", action)
-            return 1+1;
+            return [action.data, ];
         default:
-            return "no action called";
+            return data;
     }
 }
